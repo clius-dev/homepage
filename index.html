@@ -1,1 +1,472 @@
-Real Home Index
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIUS_Digital Twin</title>
+    <style>
+        /* 기본 스타일 및 리셋 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* 원본 사이트에서 사용되는 폰트와 유사한 굵기를 표현하기 위해 폰트 설정 */
+            font-family: 'Pretendard', 'Malgun Gothic', 'Arial', sans-serif; 
+            color: #1A1A1A;
+        }
+
+        body {
+            line-height: 1.5;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- 레이아웃 및 여백 설정 (원본 Figma와 유사하게) --- */
+        .container {
+            max-width: 1280px; /* 메인 콘텐츠 폭 */
+            margin: 0 auto;
+            padding: 0 80px; /* 좌우 여백 */
+        }
+
+        .section {
+            padding: 100px 0; /* 상하 여백 */
+        }
+        
+        /* --- 헤더/네비게이션 --- */
+        .header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: #FFFFFF;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 24px 80px;
+        }
+
+        .navbar {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800; /* Extra Bold */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* --- 메인 콘텐츠 시작 (헤더 높이 고려) --- */
+        main {
+            padding-top: 73px; 
+        }
+
+        /* --- 1. Hero Section --- */
+        .hero-section {
+            background-color: #EBEBEB; /* 원본의 밝은 회색 배경 */
+            text-align: center;
+            padding: 180px 0 100px;
+        }
+
+        .hero-section h1 {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 50px;
+        }
+
+        .highlight-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .highlight-item {
+            width: 300px;
+            padding: 25px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-item h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .highlight-item p {
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .showreel-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* --- 2. Architecture & Car Detail Sections --- */
+        .detail-feature-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+        
+        .detail-feature {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 100px; /* 섹션 간 간격 */
+        }
+        
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        .feature-image-area {
+            flex: 1;
+            min-width: 450px;
+        }
+
+        .feature-image-placeholder {
+            width: 100%;
+            height: 400px; 
+            background-color: #DDD;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #888;
+            border-radius: 4px;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-content h3 { /* 섹션 소제목 (Architecture, Car) */
+            font-size: 20px;
+            font-weight: 700;
+            color: #333; /* 원본에서 사용된 진한 색상 */
+            margin-bottom: 10px;
+        }
+        
+        .feature-content h2 { /* 핵심 제목 */
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .feature-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* --- 3. Works & Our Business Sections --- */
+        .grid-header {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 80px;
+            margin-bottom: 40px;
+        }
+
+        .grid-header h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .grid-header p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Works는 4열 */
+            gap: 30px;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+
+        .business-grid {
+            grid-template-columns: repeat(3, 1fr); /* Business는 3열 */
+        }
+
+        .project-card {
+            background-color: #FFFFFF;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .project-image-placeholder {
+            width: 100%;
+            height: 220px; 
+            background-color: #F0F0F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-info {
+            padding: 15px 0 0;
+            text-align: left;
+        }
+
+        .project-info h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* --- 4. Footer/Contact Section --- */
+        .footer {
+            background-color: #1A1A1A;
+            padding: 80px 0 40px;
+        }
+
+        .footer * {
+            color: #CCCCCC;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid #333;
+            padding-bottom: 40px;
+            margin-bottom: 30px;
+        }
+
+        .contact-info h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* --- 반응형 (모바일) --- */
+        @media (max-width: 1024px) {
+            .header, .container, .grid-header, .detail-feature-wrapper {
+                padding: 0 20px; /* 여백 축소 */
+            }
+            .header {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                gap: 15px;
+            }
+            .hero-section {
+                padding: 100px 20px 50px;
+            }
+            .hero-section h1 {
+                font-size: 40px;
+            }
+            .highlight-grid {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .detail-feature {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 0 20px;
+            }
+            .business-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .footer {
+                padding: 50px 20px 20px;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">CLIUS_Digital Twin</div>
+            <ul class="nav-links">
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#car">Car</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#business">Our Business</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Realistic Digital Twin</h1>
+                <div class="highlight-grid">
+                    <div class="highlight-item">
+                        <h3>Architecture Simulator</h3>
+                        <p>Architecture</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Car Configurator</h3>
+                        <p>Car</p>
+                    </div>
+                </div>
+                <a href="#" class="showreel-btn">View Our Showreel</a>
+            </div>
+        </section>
+        
+        <section class="section" id="architecture">
+            <div class="detail-feature-wrapper">
+                <div class="detail-feature">
+                    <div class="feature-image-area">
+                        <div class="feature-image-placeholder">건축 시뮬레이터 이미지 영역</div>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Architecture</h3>
+                        <h2>Korea’s Largest Urban Architecture Simulator</h2>
+                        <p>강원도 춘천 660,000m2 바이오 혁신 도시<br>디지털 트윈 수주</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="car" style="padding-top: 0;">
+            <div class="detail-feature-wrapper">
+                <div class="detail-feature reverse">
+                    <div class="feature-image-area">
+                        <div class="feature-image-placeholder">차량 컨피규레이터 이미지 영역</div>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Car</h3>
+                        <h2>Korea’s Largest Car Configurator</h2>
+                        <p>차량의 모든 옵션을 체험할 수 있는<br>국내 유일의 디지털 트윈</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="works">
+            <div class="grid-header">
+                <h2>Works</h2>
+                <p>클라이어스는 현대적 감성과 기술적 정밀함으로<br>기술과 공간이 조화되는 새로운 형태의 디지털 경험을 디자인합니다.</p>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>Kia DCS</h4></div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>Channel Hyundai</h4></div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>CES</h4></div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>MotorShow</h4></div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>Project X</h4></div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>Project Y</h4></div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>Project Z</h4></div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>Project A</h4></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="business">
+            <div class="grid-header">
+                <h2>Our Business</h2>
+                <p>선한 메타버스와 모바일 게임부터 키즈테마파크를 위한 미디어 체험 사업 등<br>아이들을 위한 가상현실 콘텐츠 사업을 합니다.</p>
+            </div>
+            <div class="project-grid business-grid">
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>퍼플도어</h4></div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>Hyundai Japan</h4></div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-placeholder">Image</div>
+                    <div class="project-info"><h4>Digital Wall</h4></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>ms@clius.co.kr</p>
+                <p>Join B/D, 223-6, Hakdong-ro, Gangnam-gu, Seoul, 06053, Korea</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © Clius Co., Ltd. All Rights Reserved.
+        </div>
+    </footer> -->
+</body>
+</html>
