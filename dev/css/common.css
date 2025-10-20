@@ -324,8 +324,8 @@ section {
 }
 
 .project-grid svg {
-    width: 64px;
-    height: 64px;    
+    width: 56px;
+    height: 56px;    
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -661,7 +661,8 @@ section {
     }
 
     .feature-image-area svg {
-        width: 48px;    
+        width: 48px;
+        height: 48px;
     }
 
     .project-info {
@@ -718,4 +719,7 @@ section {
         gap: 40px;
     }
 
+    .feature-image-area, .feature-image-area video, .project-image-placeholder {
+        border-radius: 16px;
+    }
 }
