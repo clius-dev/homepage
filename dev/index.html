@@ -1,1 +1,475 @@
-Dev Home Index
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIUS_Digital Twin</title>    
+    <link href="css/common.css" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="header">
+
+        <nav class="navbar">
+            <div class="logo">
+                <svg width="108" height="24" viewBox="0 0 108 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_884)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M47.9327 24.1695C48.0796 24.1846 48.2309 24.1937 48.3824 24.1937H49.5846C49.736 24.1937 49.886 24.1846 50.0344 24.1695H50.3341C52.3247 24.1695 53.9392 22.5339 53.9392 20.5122V8.942H47.9326L47.9327 24.1695ZM91.4808 5.89579H104.396C106.386 5.89579 108 4.26023 108 2.24177V-0.193359H91.4808C87.3346 -0.193359 83.9722 3.21458 83.9722 7.41881C83.9722 11.6231 87.3346 15.0341 91.4808 15.0341H100.491C101.32 15.0341 101.992 15.715 101.992 16.5542C101.992 17.3962 101.32 18.0772 100.491 18.0772H87.5775C85.5852 18.0772 83.9722 19.7157 83.9722 21.7312V24.1695H100.491C104.638 24.1695 108 20.7615 108 16.5542C108 12.3498 104.638 8.942 100.491 8.942H91.4808C90.6519 8.942 89.9804 8.26098 89.9804 7.41881C89.9804 6.57665 90.6519 5.89579 91.4808 5.89579ZM0.313294 8.48283C0.118348 9.46171 0 10.6686 0 11.9849C0 13.2983 0.118349 14.5021 0.311759 15.481C1.09722 20.4059 5.31095 24.1695 10.3896 24.1695H23.9049V21.7312C23.9049 19.7157 22.2919 18.0772 20.3011 18.0772H11.0732C8.54135 18.0772 6.44869 16.2107 6.04406 13.7634C5.93462 13.2223 5.87306 12.6203 5.87306 11.988C5.87306 11.3527 5.93462 10.7538 6.04406 10.2127C6.44715 7.76545 8.54135 5.89579 11.0732 5.89579H23.9049V-0.193359H10.3896C5.31248 -0.193359 1.10474 3.56105 0.313294 8.48283ZM74.9616 3.47295V12.827C74.9616 15.3929 73.1209 17.5178 70.7059 17.9282C70.1722 18.0377 69.5816 18.1015 68.955 18.1015C68.3315 18.1015 67.7393 18.0377 67.2072 17.9282C64.7907 17.5178 62.9499 15.3929 62.9499 12.827V8.95102H56.942V13.5203C56.942 18.6701 60.6459 22.9381 65.4997 23.7377C66.4666 23.9354 67.6568 24.0569 68.9534 24.0569C70.2501 24.0569 71.4345 23.9383 72.4012 23.7408C77.2596 22.9412 80.9682 18.6701 80.9682 13.5203V-0.184176H78.5667C76.5761 -0.184176 74.9616 1.45133 74.9616 3.47295ZM32.9155 12.9V5.58885C32.9155 5.56441 32.917 5.54013 32.9185 5.50978V3.48805C32.9185 1.4696 31.3056 -0.165965 29.3164 -0.165965H26.9119V4.06878H26.9073V14.119C26.9073 19.6701 31.3475 24.1695 36.819 24.1695H44.9287V18.0772H38.0212C35.2 18.0772 32.9155 15.7577 32.9155 12.9Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M50.9353 0C52.6906 0 54.1117 1.41813 54.1117 3.16834C54.1117 4.91856 52.6906 6.33653 50.9353 6.33653C49.18 6.33653 47.7588 4.91841 47.7588 3.16834C47.7588 1.41828 49.1799 0 50.9353 0Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M59.9444 0C61.6998 0 63.1207 1.41813 63.1207 3.16834C63.1207 4.91856 61.6998 6.33653 59.9444 6.33653C58.1889 6.33653 56.768 4.91841 56.768 3.16834C56.768 1.41828 58.1891 0 59.9444 0Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1_884">
+                    <rect width="108" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>                    
+            </div>
+            <ul class="nav-links nav-desktop">
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#car">Car</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#business">Our Business</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+        
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#car">Car</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#business">Our Business</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-section">
+            <div class="container">
+                <h1>Realistic Digital Twin</h1>
+                <div class="highlight-grid">
+                    <div class="highlight-item">
+                        <h3>Architecture</h3>
+                        <p>Simulator</p>
+                    </div>
+                    <div class="view-button desktop">
+                        <button type="button">View Our Showreel</button>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Car</h3>
+                        <p>Configurator</p>
+                    </div>
+                </div>
+                <div class="view-button mobile">
+                    <button type="button">View Our Showreel</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="architecture">
+            <div class="detail-feature-wrapper">
+                <div class="detail-feature">
+                    <div class="feature-content">
+                        <h3>Architecture</h3>
+                        <h2>Korea’s Largest Urban Architecture Simulator</h2>
+                        <p>" 강원도 춘천 660,000m<sup>2</sup> 바이오 혁신 도시 디지털 트윈 사업 수주 "</p>
+                    </div>
+                    <div class="feature-image-area" id="arch-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="car">
+            <div class="detail-feature-wrapper">
+                <div class="detail-feature">
+                    <div class="feature-content">
+                        <h3>Car</h3>
+                        <h2>Korea’s Largest Car Configurator</h2>
+                        <p>차량의 모든 옵션을 체험할 수 있는 국내 유일한 디지털 트윈</p>
+                    </div>
+                    <div class="feature-image-area clickable" id="car-img" data-href="https://www.youtube.com/watch?v=YejNY2FUwxQ">
+                        <video src="videos/video_car.mp4" autoplay loop muted playsinline></video>
+                        <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                            <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                        </svg>
+                
+                        <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                            <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="works">
+            <div class="detail-feature-wrapper">
+                <div class="detail-feature">
+                    <div class="grid-header">
+                        <h3>Works</h3>
+                        <p>클라이어스는 현대적 감성과 기술적 정밀함으로 기술과 공간이 조화되는 새로운 형태의 디지털 경험을 디자인합니다.</p>
+                    </div>
+                    <div class="project-grid">
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=f--sLxbruS4">
+                            <div class="project-image-placeholder" id="work1">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">CG</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=2wKI4jnzSQU">
+                            <div class="project-image-placeholder" id="work2">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">Exhibition</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=XuFNr4OS5TU">
+                            <div class="project-image-placeholder" id="work3">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">Showroom</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=bzG3y3HLoow">
+                            <div class="project-image-placeholder" id="work4">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">TV App</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=r271ZPQSvIk&t=2s">
+                            <div class="project-image-placeholder" id="work5">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">HYUNDAI Web & CG</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://us.qcells.com/complete-energy-solutions/overview/">
+                            <div class="project-image-placeholder" id="work6">
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.8684 24.2538L14.0823 29.0399C10.5079 32.6144 10.508 38.4097 14.0823 41.9843C17.6569 45.5588 23.453 45.5588 27.0276 41.9843L31.8137 37.1991L33.2278 38.6132L28.4417 43.3993C24.0861 47.7548 17.0238 47.7547 12.6682 43.3993C8.3126 39.0437 8.31264 31.9815 12.6682 27.6259L17.4543 22.8397L18.8684 24.2538ZM36.1106 21.1532L21.7512 35.5126L20.3372 34.0985L34.6965 19.7391L36.1106 21.1532ZM28.2239 12.0702C32.5795 7.71458 39.6417 7.71455 43.9973 12.0702C48.3528 16.4258 48.3529 23.488 43.9973 27.8436L39.2112 32.6298L37.7971 31.2157L42.5833 26.4296C46.1578 22.855 46.1577 17.0589 42.5833 13.4843C39.0087 9.90967 33.2125 9.90969 29.6379 13.4843L24.8518 18.2704L23.4377 16.8563L28.2239 12.0702Z" fill="white"/>
+                                </svg>                                    
+                            </div>
+                            <div class="project-info">한화 Web</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=q8PSZVbFhxc">
+                            <div class="project-image-placeholder" id="work7">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">360VR</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=s3FB0yelsjQ">
+                            <div class="project-image-placeholder" id="work8">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">AR Message</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="business">
+            <div class="detail-feature-wrapper">
+                <div class="detail-feature">
+                    <div class="grid-header">
+                        <h3>Our Business</h3>
+                        <p>선한 메타버스와 모바일 게임부터 키즈테마파크를 위한 미디어 체험 사업 등 아이들을 위한 가상현실 콘텐츠 사업을 합니다.</p>
+                    </div>
+                    <div class="project-grid business-grid">
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=w_X3n8ZEriY">
+                            <div class="project-image-placeholder" id="biz1">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">Metaverse Purple Door</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=sENJgYg45p4">
+                            <div class="project-image-placeholder" id="biz2">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">Mobile Games</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=eANy__IrYGM">
+                            <div class="project-image-placeholder" id="biz3">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">Media Theme Park</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=qMWfEvF1TEc">
+                            <div class="project-image-placeholder" id="biz4">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">QR Configurator</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=kj5_MZhcgqA">
+                            <div class="project-image-placeholder" id="biz5">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">Digital Signage</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://youtu.be/--LEwzaVww0">
+                            <div class="project-image-placeholder" id="biz6">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">Digital Showcase</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=wIc8kvqGmP0">
+                            <div class="project-image-placeholder" id="biz7">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">VR Experience</div>
+                        </div>
+                        <div class="project-card clickable" data-href="https://www.youtube.com/watch?v=aW3BfGRmGbo">
+                            <div class="project-image-placeholder" id="biz8">
+                                <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                                </svg>
+                        
+                                <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                                    <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                                </svg>
+                            </div>
+                            <div class="project-info">Education</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="detail-feature-wrapper">
+                <div class="detail-feature">
+                    <div class="feature-content">
+                        <h3>Contact Us</h3>
+                        <p><a href="mailto:ms@clius.co.kr" class="biz_link">ms@clius.co.kr</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-l-wrap">
+                <div class="footer-logo">
+                    <svg width="179" height="56" viewBox="0 0 179 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_873)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M79.4439 48.1694C79.6874 48.1944 79.9383 48.2096 80.1894 48.2096H82.1819C82.4328 48.2096 82.6813 48.1944 82.9274 48.1694H83.4241C86.7234 48.1694 89.3993 45.4586 89.3993 42.1078V22.9313H79.4439L79.4439 48.1694ZM151.621 17.8825H173.027C176.324 17.8825 179 15.1717 179 11.8263V7.79028H151.621C144.749 7.79028 139.176 13.4386 139.176 20.4067C139.176 27.3749 144.749 33.0284 151.621 33.0284H166.555C167.929 33.0284 169.042 34.1569 169.042 35.5477C169.042 36.9434 167.929 38.072 166.555 38.072H145.152C141.849 38.072 139.176 40.7877 139.176 44.1282V48.1694H166.555C173.427 48.1694 179 42.521 179 35.5477C179 28.5794 173.427 22.9313 166.555 22.9313H151.621C150.247 22.9313 149.134 21.8026 149.134 20.4067C149.134 19.0109 150.247 17.8825 151.621 17.8825ZM0.519255 22.1703C0.196152 23.7927 0 25.793 0 27.9747C0 30.1515 0.196152 32.1466 0.516711 33.769C1.81854 41.9316 8.8024 48.1694 17.2199 48.1694H39.6201V44.1282C39.6201 40.7877 36.9467 38.072 33.6473 38.072H18.3528C14.1565 38.072 10.6881 34.9784 10.0175 30.9223C9.83607 30.0256 9.73406 29.0277 9.73406 27.9798C9.73406 26.9268 9.83607 25.9341 10.0175 25.0374C10.6856 20.9813 14.1565 17.8825 18.3528 17.8825H39.6201V7.79028H17.2199C8.80494 7.79028 1.831 14.0129 0.519255 22.1703ZM124.242 13.8669V29.3703C124.242 33.623 121.191 37.1449 117.188 37.8251C116.304 38.0065 115.325 38.1123 114.286 38.1123C113.253 38.1123 112.271 38.0065 111.39 37.8251C107.384 37.1449 104.334 33.623 104.334 29.3703V22.9462H94.376V30.5193C94.376 39.0546 100.515 46.1285 108.56 47.4538C110.162 47.7814 112.135 47.9829 114.284 47.9829C116.433 47.9829 118.396 47.7863 119.998 47.4589C128.051 46.1337 134.197 39.0546 134.197 30.5193V7.8055H130.217C126.918 7.8055 124.242 10.5162 124.242 13.8669ZM54.5543 29.4913V17.3738C54.5543 17.3333 54.5569 17.293 54.5594 17.2427V13.8919C54.5594 10.5465 51.886 7.83569 48.5891 7.83569H44.604V14.8544H44.5964V31.5117C44.5964 40.7121 51.9556 48.1694 61.024 48.1694H74.4651V38.072H63.0166C58.3407 38.072 54.5543 34.2277 54.5543 29.4913Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M84.4205 8C87.3297 8 89.685 10.3181 89.685 13.179C89.685 16.04 87.3297 18.3578 84.4205 18.3578C81.5113 18.3578 79.1557 16.0397 79.1557 13.179C79.1557 10.3183 81.511 8 84.4205 8Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M99.3522 8C102.262 8 104.617 10.3181 104.617 13.179C104.617 16.04 102.262 18.3578 99.3522 18.3578C96.4427 18.3578 94.0876 16.0397 94.0876 13.179C94.0876 10.3183 96.443 8 99.3522 8Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1_873">
+                        <rect width="179" height="40" fill="white" transform="translate(0 8)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>                    
+                </div>
+                <div class="contact-info">
+                    <p>Join B/D, 223-6, Hakdong-ro, Gangnam-gu, Seoul, 06053, Korea</p>
+                </div>
+            </div>            
+            <div class="copyright">
+                <p>© Clius Co., Ltd. All Rights Reserved.</p>                
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 스크롤 시 요소가 나타나는 애니메이션 (Intersection Observer API 사용)
+        document.addEventListener('DOMContentLoaded', () => {
+            // 💡 수정된 부분: .section이 아닌 .detail-feature 요소를 관찰하도록 변경
+            const features = document.querySelectorAll('.detail-feature > div');
+
+            const observerOptions = {
+                root: null, 
+                rootMargin: '0px',
+                threshold: 0.1 // 요소가 뷰포트의 20% 보일 때 애니메이션 시작
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target); // 한 번 실행 후 관찰 중지
+                    }
+                });
+            }, observerOptions);
+
+            // 💡 수정된 부분: features (detail-feature 요소들)를 관찰하도록 변경
+            features.forEach(feature => {
+                // detail-feature는 main-section 안에만 있지 않으므로 별도의 조건 없이 모두 관찰합니다.
+                observer.observe(feature);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.clickable');
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const url = card.getAttribute('data-href');
+                    if (url) {
+                        // 현재 탭에서 URL로 이동
+                        // window.location.href = url; 
+                        
+                        // 새 탭에서 열고 싶다면: 
+                        window.open(url, '_blank');
+                    }
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+        // ... 기존 Intersection Observer 및 카드 클릭 이벤트 로직 ...
+
+        // 💡 햄버거 메뉴 토글 로직 추가
+        const menuToggle = document.querySelector('.menu-toggle');
+        const header = document.querySelector('.header');
+        
+        if (menuToggle && header) {
+            menuToggle.addEventListener('click', () => {
+                // 1. header에 is-active 클래스를 토글 (메뉴 열기/닫기)
+                header.classList.toggle('is-active');
+
+                // 2. 접근성(ARIA) 속성 업데이트
+                const isExpanded = header.classList.contains('is-active');
+                menuToggle.setAttribute('aria-expanded', isExpanded);
+
+                // (선택 사항) 메뉴가 열렸을 때 스크롤 방지
+                document.body.style.overflow = isExpanded ? 'hidden' : '';
+            });
+
+            // 3. 모바일 메뉴 링크 클릭 시 메뉴 닫기 (새로고침 방지 목적이므로 필요할 경우 추가)
+            const mobileLinks = document.querySelectorAll('.nav-mobile a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    header.classList.remove('is-active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    });
+    </script>
+</body>
+</html>
