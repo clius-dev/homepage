@@ -60,6 +60,7 @@ body {
     line-height: 1.5;
     background-color: #000000;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 a {
@@ -68,6 +69,11 @@ a {
 
 ul {
     list-style: none;
+}
+
+html.is-active, 
+body.is-active {
+    overflow-y: hidden; 
 }
 
 /* --- 공통 스타일 및 레이아웃 --- */
