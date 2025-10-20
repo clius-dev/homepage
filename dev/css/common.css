@@ -194,6 +194,7 @@ section {
     border: none;
     font-family: KakaoBigFont;
     font-weight: 700;
+    color: #000000;
     
     /* 1. 너비 (Width) */
     /* 너비: (최소 240px, 16.15vw로 유동적, 최대 310px) */
