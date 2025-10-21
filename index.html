@@ -61,7 +61,7 @@
                         <p>Simulator</p>
                     </div>
                     <div class="view-button desktop">
-                        <button type="button" id="view_showreel_btn">View Our Showreel</button>
+                        <button type="button" class="view_showreel_btn">View Our Showreel</button>
                     </div>
                     <div class="highlight-item">
                         <h3>Car</h3>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="view-button mobile">
-                    <button type="button" id="view_showreel_btn">View Our Showreel</button>
+                    <button type="button" class="view_showreel_btn">View Our Showreel</button>
                 </div>
             </div>
         </section>
@@ -398,18 +398,19 @@
     <script>
 
         document.addEventListener('DOMContentLoaded', () => {
-			const showreelButton = document.getElementById('view_showreel_btn');
-				showreelButton.addEventListener('click', function() {
-				// 3. 원하는 링크(URL)를 지정하여 페이지를 이동시킵니다.
-				const targetUrl = "https://www.youtube.com/watch?v=p5q35T_aB4U"; // 🚨 여기에 원하는 URL을 입력하세요.
-				
-				// 현재 창에서 페이지 이동
-				//window.location.href = targetUrl;
-				
-				// 또는 새 탭에서 페이지 이동을 원한다면 이 코드를 사용하세요.
-				window.open(targetUrl, '_blank'); 
-			});
-		});
+            // 💡 ID 대신 클래스 'showreel-btn'을 가진 모든 요소를 가져옴
+            const showreelButtons = document.querySelectorAll('.view_showreel_btn'); 
+            
+            // 💡 모든 버튼에 대해 반복문으로 이벤트 리스너 연결
+            showreelButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetUrl = "https://www.youtube.com/watch?v=p5q35T_aB4U"; 
+                    
+                    // 새 탭에서 페이지 이동
+                    window.open(targetUrl, '_blank'); 
+                });
+            });
+        });
 
         // 스크롤 시 요소가 나타나는 애니메이션 (Intersection Observer API 사용)
         document.addEventListener('DOMContentLoaded', () => {
