@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLIUS_Digital Twin</title>    
     <link href="css/common.css" rel="stylesheet">
-	
+	<script>
+    // 1. 버튼 요소를 ID를 이용해 가져옵니다.
+    const showreelButton = document.getElementById('view_showreel_btn');
+    
+    // 2. 버튼에 '클릭' 이벤트 리스너를 추가합니다.
+    showreelButton.addEventListener('click', function() {
+        // 3. 원하는 링크(URL)를 지정하여 페이지를 이동시킵니다.
+        const targetUrl = "https://www.youtube.com/watch?v=p5q35T_aB4U"; // 🚨 여기에 원하는 URL을 입력하세요.
+        
+        // 현재 창에서 페이지 이동
+        window.location.href = targetUrl;
+        
+        // 또는 새 탭에서 페이지 이동을 원한다면 이 코드를 사용하세요.
+        // window.open(targetUrl, '_blank'); 
+    });
+</script>
 </head>
 <body>
     
@@ -396,19 +411,6 @@
     </footer>
 
     <script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const showreelButton = document.getElementById('view_showreel_btn');
-				showreelButton.addEventListener('click', function() {
-				// 3. 원하는 링크(URL)를 지정하여 페이지를 이동시킵니다.
-				const targetUrl = "https://www.youtube.com/watch?v=p5q35T_aB4U"; // 🚨 여기에 원하는 URL을 입력하세요.
-				
-				// 현재 창에서 페이지 이동
-				//window.location.href = targetUrl;
-				
-				// 또는 새 탭에서 페이지 이동을 원한다면 이 코드를 사용하세요.
-				window.open(targetUrl, '_blank'); 
-			});
-		});
         // 스크롤 시 요소가 나타나는 애니메이션 (Intersection Observer API 사용)
         document.addEventListener('DOMContentLoaded', () => {
             // 💡 수정된 부분: .section이 아닌 .detail-feature 요소를 관찰하도록 변경
@@ -462,15 +464,25 @@
         
         if (menuToggle && header) {
             menuToggle.addEventListener('click', () => {
-                // 1. header에 is-active 클래스를 토글 (메뉴 열기/닫기)
-                header.classList.toggle('is-active');
+                const isExpanded = header.classList.toggle('is-active');
 
-                // 2. 접근성(ARIA) 속성 업데이트
-                const isExpanded = header.classList.contains('is-active');
+                // 💡 body에 is-active 클래스 토글 추가
+                document.body.classList.toggle('is-active', isExpanded); 
+                
                 menuToggle.setAttribute('aria-expanded', isExpanded);
-
-                // (선택 사항) 메뉴가 열렸을 때 스크롤 방지
-                document.body.style.overflow = isExpanded ? 'hidden' : '';
+                
+                // (스크롤 고정/복원 로직은 유지하거나, 아래처럼 간소화할 수 있습니다)
+                if (isExpanded) {
+                    currentScrollY = window.scrollY;
+                    document.body.style.position = 'fixed';
+                    document.body.style.width = '100%';
+                    document.body.style.top = `-${currentScrollY}px`;
+                } else {
+                    document.body.style.position = '';
+                    document.body.style.width = '';
+                    document.body.style.top = '';
+                    window.scrollTo(0, currentScrollY);
+                }
             });
 
             // 3. 모바일 메뉴 링크 클릭 시 메뉴 닫기 (새로고침 방지 목적이므로 필요할 경우 추가)
@@ -478,13 +490,18 @@
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     header.classList.remove('is-active');
+                    document.body.classList.remove('is-active'); // 💡 body 클래스 제거
                     menuToggle.setAttribute('aria-expanded', 'false');
-                    document.body.style.overflow = '';
+                    
+                    // 스크롤 복원
+                    document.body.style.position = '';
+                    document.body.style.width = '';
+                    document.body.style.top = '';
+                    window.scrollTo(0, currentScrollY); 
                 });
             });
         }
     });
     </script>
-
 </body>
 </html>
