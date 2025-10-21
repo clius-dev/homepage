@@ -5,22 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLIUS_Digital Twin</title>    
     <link href="css/common.css" rel="stylesheet">
-	<script>
-    // 1. 버튼 요소를 ID를 이용해 가져옵니다.
-    const showreelButton = document.getElementById('view_showreel_btn');
-    
-    // 2. 버튼에 '클릭' 이벤트 리스너를 추가합니다.
-    showreelButton.addEventListener('click', function() {
-        // 3. 원하는 링크(URL)를 지정하여 페이지를 이동시킵니다.
-        const targetUrl = "https://www.youtube.com/watch?v=p5q35T_aB4U"; // 🚨 여기에 원하는 URL을 입력하세요.
-        
-        // 현재 창에서 페이지 이동
-        window.location.href = targetUrl;
-        
-        // 또는 새 탭에서 페이지 이동을 원한다면 이 코드를 사용하세요.
-        // window.open(targetUrl, '_blank'); 
-    });
-</script>
+
 </head>
 <body>
     
@@ -84,7 +69,7 @@
                     </div>
                 </div>
                 <div class="view-button mobile">
-                    <button type="button">View Our Showreel</button>
+                    <button type="button" id="view_showreel_btn">View Our Showreel</button>
                 </div>
             </div>
         </section>
@@ -411,6 +396,21 @@
     </footer>
 
     <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+			const showreelButton = document.getElementById('view_showreel_btn');
+				showreelButton.addEventListener('click', function() {
+				// 3. 원하는 링크(URL)를 지정하여 페이지를 이동시킵니다.
+				const targetUrl = "https://www.youtube.com/watch?v=p5q35T_aB4U"; // 🚨 여기에 원하는 URL을 입력하세요.
+				
+				// 현재 창에서 페이지 이동
+				//window.location.href = targetUrl;
+				
+				// 또는 새 탭에서 페이지 이동을 원한다면 이 코드를 사용하세요.
+				window.open(targetUrl, '_blank'); 
+			});
+		});
+
         // 스크롤 시 요소가 나타나는 애니메이션 (Intersection Observer API 사용)
         document.addEventListener('DOMContentLoaded', () => {
             // 💡 수정된 부분: .section이 아닌 .detail-feature 요소를 관찰하도록 변경
