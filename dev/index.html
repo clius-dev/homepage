@@ -532,9 +532,7 @@
             let currentSlide = 0;   // 현재 슬라이드 인덱스
 
             if (archSliderContainer) {
-                
-                // 💡 핵심 수정: 초기 로드 시 슬라이드 위치를 0%로 강제 설정하여 짤림 방지
-                // 이 코드가 없으면 CSS나 다른 JS에 의해 엉뚱한 위치에서 시작할 수 있습니다.
+
                 archSliderContainer.style.transform = 'translateX(0%)';
                 
                 // 슬라이드 이동 함수
@@ -545,23 +543,25 @@
                     const translateValue = -(100 / totalSlides) * currentSlide; 
                     archSliderContainer.style.transform = `translateX(${translateValue}%)`;
 
-                    // ... (나머지 무한 루프 로직 유지)
+                    // 복제본(인덱스 3)에 도달했을 때 처리
                     if (currentSlide === realSlides) { 
+                        // 1. 0.8초 후 (애니메이션 끝난 직후) 트랜지션 없이 0번 위치로 즉시 점프
                         setTimeout(() => {
-                            archSliderContainer.style.transition = 'none'; 
-                            currentSlide = 0; 
-                            archSliderContainer.style.transform = 'translateX(0)'; 
-                        }, 800); 
+                            archSliderContainer.style.transition = 'none'; // 트랜지션 제거
+                            currentSlide = 0; // 인덱스 초기화
+                            archSliderContainer.style.transform = 'translateX(0)'; // 위치 (1번 이미지)로 즉시 점프
+                        }, 800); // CSS transition 시간(0.8s)과 동일하게 설정
                         
+                        // 2. 0.85초 후 트랜지션을 다시 추가하여 다음 슬라이드를 준비
                         setTimeout(() => {
                             archSliderContainer.style.transition = 'transform 0.8s ease-in-out';
                         }, 850); 
                     }
                 }
 
-                // 💡 3초마다 슬라이드 넘기기
+                // 💡 3초마다 슬라이드 넘기기 (이전 코드와 동일한 3000ms 유지)
                 setInterval(nextSlide, 3000); 
-            }
+            }            
         });
 
     </script>
