@@ -82,13 +82,23 @@
                         <h2>Korea’s Largest Urban Architecture Simulator</h2>
                         <p>" 강원도 춘천 660,000m<sup>2</sup> 바이오 혁신 도시 디지털 트윈 사업 수주 "</p>
                     </div>
-                    <div class="feature-image-area" id="arch-img">
-                        <div class="slider-container">
+                    <div class="feature-image-area clickable" id="arch-img" data-href="https://www.youtube.com/watch?v=PzK9YUPemPA">
+                        <!-- <div class="slider-container">
                             <div class="slide-item" id="arch-slide-1"></div>
                             <div class="slide-item" id="arch-slide-2"></div>
                             <div class="slide-item" id="arch-slide-3"></div>
                             <div class="slide-item" id="arch-slide-1-clone"></div>
-                        </div>
+                        </div> -->
+                        <video src="videos/video_architecture.mp4" autoplay loop muted playsinline></video>
+                        <svg class="default-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="54" cy="54" r="52.5" stroke="white" stroke-width="3"/>
+                            <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" stroke="white" stroke-width="3"/>
+                        </svg>
+                
+                        <svg class="hover-icon" width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="54" cy="54" r="52.5" fill="black" fill-opacity="0.5" stroke="white" stroke-width="3"/>
+                            <path d="M72.3203 54.0693C72.648 54.2628 72.648 54.7372 72.3203 54.9307L45.2539 70.9121C44.9207 71.1088 44.5003 70.8692 44.5 70.4824L44.5 38.5176C44.5003 38.1308 44.9207 37.8912 45.2539 38.0879L72.3203 54.0693Z" fill="white" stroke="white" stroke-width="3"/>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -526,42 +536,42 @@
             // =================================================================
             // 5. Architecture 자동 무한 루프 슬라이드
             // =================================================================
-            const archSliderContainer = document.querySelector('#arch-img .slider-container');
-            const totalSlides = 4;  // 1, 2, 3, 1' (복제본 포함)
-            const realSlides = 3;   // 실제 슬라이드 개수
-            let currentSlide = 0;   // 현재 슬라이드 인덱스
+            // const archSliderContainer = document.querySelector('#arch-img .slider-container');
+            // const totalSlides = 4;  // 1, 2, 3, 1' (복제본 포함)
+            // const realSlides = 3;   // 실제 슬라이드 개수
+            // let currentSlide = 0;   // 현재 슬라이드 인덱스
 
-            if (archSliderContainer) {
+            // if (archSliderContainer) {
 
-                archSliderContainer.style.transform = 'translateX(0%)';
+            //     archSliderContainer.style.transform = 'translateX(0%)';
                 
-                // 슬라이드 이동 함수
-                function nextSlide() {
-                    currentSlide++;
+            //     // 슬라이드 이동 함수
+            //     function nextSlide() {
+            //         currentSlide++;
 
-                    // 4개의 슬라이드 중 다음 위치로 이동 (25%씩)
-                    const translateValue = -(100 / totalSlides) * currentSlide; 
-                    archSliderContainer.style.transform = `translateX(${translateValue}%)`;
+            //         // 4개의 슬라이드 중 다음 위치로 이동 (25%씩)
+            //         const translateValue = -(100 / totalSlides) * currentSlide; 
+            //         archSliderContainer.style.transform = `translateX(${translateValue}%)`;
 
-                    // 복제본(인덱스 3)에 도달했을 때 처리
-                    if (currentSlide === realSlides) { 
-                        // 1. 0.8초 후 (애니메이션 끝난 직후) 트랜지션 없이 0번 위치로 즉시 점프
-                        setTimeout(() => {
-                            archSliderContainer.style.transition = 'none'; // 트랜지션 제거
-                            currentSlide = 0; // 인덱스 초기화
-                            archSliderContainer.style.transform = 'translateX(0)'; // 위치 (1번 이미지)로 즉시 점프
-                        }, 800); // CSS transition 시간(0.8s)과 동일하게 설정
+            //         // 복제본(인덱스 3)에 도달했을 때 처리
+            //         if (currentSlide === realSlides) { 
+            //             // 1. 0.8초 후 (애니메이션 끝난 직후) 트랜지션 없이 0번 위치로 즉시 점프
+            //             setTimeout(() => {
+            //                 archSliderContainer.style.transition = 'none'; // 트랜지션 제거
+            //                 currentSlide = 0; // 인덱스 초기화
+            //                 archSliderContainer.style.transform = 'translateX(0)'; // 위치 (1번 이미지)로 즉시 점프
+            //             }, 800); // CSS transition 시간(0.8s)과 동일하게 설정
                         
-                        // 2. 0.85초 후 트랜지션을 다시 추가하여 다음 슬라이드를 준비
-                        setTimeout(() => {
-                            archSliderContainer.style.transition = 'transform 0.8s ease-in-out';
-                        }, 850); 
-                    }
-                }
+            //             // 2. 0.85초 후 트랜지션을 다시 추가하여 다음 슬라이드를 준비
+            //             setTimeout(() => {
+            //                 archSliderContainer.style.transition = 'transform 0.8s ease-in-out';
+            //             }, 850); 
+            //         }
+            //     }
 
-                // 💡 3초마다 슬라이드 넘기기 (이전 코드와 동일한 3000ms 유지)
-                setInterval(nextSlide, 3000); 
-            }            
+            //     // 💡 3초마다 슬라이드 넘기기 (이전 코드와 동일한 3000ms 유지)
+            //     setInterval(nextSlide, 3000); 
+            // }            
         });
 
     </script>
