@@ -344,9 +344,9 @@ section {
 }
 
 .detail-feature {
-    display: grid;
-    gap: 120px; 
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
 }
 
 /* 이미지 및 비디오 영역 공통 스타일 */
@@ -425,9 +425,14 @@ section {
     column-gap: 16px;
     row-gap: 80px;
 }
-
+/* 
 .business-grid {
-    grid-template-columns: repeat(8, 1fr); /* 데스크탑 Business 그리드는 8등분 사용 */
+    grid-template-columns: repeat(8, 1fr); /* 데스크탑 Business 그리드는 8등분 사용 
+}
+ */
+ 
+.business-grid {
+    grid-template-columns: repeat(7, 1fr); /* 데스크탑 Business 그리드는 8등분 사용 */
 }
 
 .project-card {
